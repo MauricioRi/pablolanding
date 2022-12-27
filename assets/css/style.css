@@ -559,9 +559,11 @@ input[type="text"], textarea {
 }
 
 .padre {
-  transform: skew(0deg,0deg);
+  transform: skew(-20deg,0deg);
+  -ms-transform: skew(-20deg,0deg);
   -webkit-transform: skew(-20deg,0deg);
   -webkit-box-shadow: 20px 0px 30px 0px rgba(33,33,33,1);
+  -moz-box-shadow: 20px 0px 30px 0px rgba(33,33,33,1);
   padding-left: 10%;
   margin-left: -10%;
 
@@ -575,10 +577,14 @@ input[type="text"], textarea {
   color: #ffffff;
   font-weight: 1000;
   font-size: 62px;
+  transform: skew(20deg,0deg);
+  -ms-transform: skew(20deg,0deg);
   -webkit-transform: skew(20deg,0deg);
 }
 
 .padre h4{
+  transform: skew(20deg,0deg);
+  -ms-transform: skew(20deg,0deg);
   -webkit-transform: skew(20deg,0deg);
   color: #ffffff;
   font-size: 32px;
@@ -592,6 +598,58 @@ input[type="text"], textarea {
 
 .carruselpromo{
   height: 30%;
+}
+
+.detail-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(248, 2, 248);
+}
+.detail-carousel:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5%;
+  left: -5%;
+  height: 120px;
+  background: #fff;
+  -webkit-clip-path: ellipse(50% 60% at 50% 0%);
+  clip-path: ellipse(50% 100% at 50% 0%);
+}
+.detail-carousel:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -5%;
+  left: -5%;
+  height: 120px;
+  background: #fff;
+  -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+  clip-path: ellipse(50% 100% at 50% 100%);
+}
+.detail-carousel h1 {
+  color: #ffffff;
+  font-weight: 1000;
+  font-size: 62px;
+  transform: skew(20deg,0deg);
+  -ms-transform: skew(20deg,0deg);
+  -webkit-transform: skew(20deg,0deg);
+}
+
+.detail-carousel h4{
+  transform: skew(20deg,0deg);
+  -ms-transform: skew(20deg,0deg);
+  -webkit-transform: skew(20deg,0deg);
+  color: #ffffff;
+  font-size: 32px;
+  margin-left: -10%;
+  margin-bottom: -2%;
+}
+
+.img-carousel{
+  margin-left: -10%;
 }
 
 
@@ -649,7 +707,6 @@ input[type="text"], textarea {
 }
 
 .padree  {
- 
   width: 100%;
   /* display: flex;
     align-items: center; */
