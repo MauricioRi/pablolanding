@@ -607,28 +607,131 @@ input[type="text"], textarea {
   flex-direction: column;
   background: rgb(248, 2, 248);
 }
-.detail-carousel:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -5%;
-  left: -5%;
-  height: 120px;
-  background: #fff;
-  -webkit-clip-path: ellipse(50% 60% at 50% 0%);
-  clip-path: ellipse(50% 100% at 50% 0%);
+
+/*estilo de carrusel de habitaciones para el tamaño máximo*/
+@media (min-width: 1201px ) {
+  .detail-carousel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 100% at 50% 0%) !important;
+    clip-path: ellipse(50% 100% at 50% 0%) !important;
+  }
+  .detail-carousel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 100% at 50% 100%) !important;
+    clip-path: ellipse(50% 100% at 50% 100%) !important;
+  }
 }
-.detail-carousel:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: -5%;
-  left: -5%;
-  height: 120px;
-  background: #fff;
-  -webkit-clip-path: ellipse(50% 60% at 50% 100%);
-  clip-path: ellipse(50% 100% at 50% 100%);
+
+/*estilo de carrusel de habitaciones dependiendo del tamaño de la pantalla*/
+@media (max-width: 501px) {
+  .detail-carousel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 30% at 50% 0%) !important;
+    clip-path: ellipse(50% 30% at 50% 0%) !important;
+  }
+  .detail-carousel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 30% at 50% 100%) !important;
+    clip-path: ellipse(50% 30% at 50% 100%) !important;
+  }
 }
+@media (min-width: 502px) and (max-width: 768px) {
+  .detail-carousel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(40% 20% at 50% 0%) !important;
+    clip-path: ellipse(50% 40% at 50% 0%) !important;
+  }
+  .detail-carousel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(40% 20% at 50% 100%) !important;
+    clip-path: ellipse(50% 40% at 50% 100%) !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .detail-carousel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(40% 60% at 50% 0%) !important;
+    clip-path: ellipse(50% 60% at 50% 0%) !important;
+  }
+  .detail-carousel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(40% 60% at 50% 100%) !important;
+    clip-path: ellipse(50% 60% at 50% 100%) !important;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .detail-carousel:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 80% at 50% 0%) !important;
+    clip-path: ellipse(50% 80% at 50% 0%) !important;
+  }
+  .detail-carousel:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    left: -5%;
+    height: 120px;
+    background: #fff;
+    -webkit-clip-path: ellipse(50% 80% at 50% 100%) !important;
+    clip-path: ellipse(50% 80% at 50% 100%) !important;
+  }
+}
+
 .detail-carousel h1 {
   color: #ffffff;
   font-weight: 1000;
